@@ -1,0 +1,141 @@
+.root {
+    -fx-background-image: url("../image/sign.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+/* 按钮样式 */
+.button {
+    -fx-font-weight: bold;
+    -fx-text-fill: #006464;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+}
+.button:hover {
+    -fx-background-color: #006464;
+    -fx-text-fill: white;
+}
+
+/* 文本框样式 */
+.text-field {
+    -fx-font-family: "微软雅黑";
+    -fx-font-weight: normal;
+    -fx-text-fill: #006464;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+    -fx-background-color: white;
+    -fx-border-color: #006464;
+}
+
+.text-field:hover {
+    -fx-border-color: #00B050; /* 暗绿色 */
+}
+
+/* 标签样式 */
+.label {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 复选框样式 */
+.checkbox {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 单选按钮样式 */
+.radio-button {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 列表视图样式 */
+.list-view {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 表格视图样式 */
+.table-view {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 进度条样式 */
+.progress-bar {
+    -fx-background-color: #E0E0E0;
+    -fx-accent: #006464;
+}
+
+/* 滑块样式 */
+.slider {
+    -fx-background-color: #E0E0E0;
+    -fx-accent: #006464;
+}
+
+/* 下拉框样式 */
+.combo-box {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 菜单样式 */
+.menu {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* 文本区域样式 */
+.text-area {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+}
+
+/* Spinner样式 */
+/* Spinner样式 */
+.spinner {
+    -fx-font-family: "微软雅黑";
+    -fx-font-size: 14px;
+    -fx-text-fill: #006464;
+    -fx-background-color: white;
+    -fx-border-color: #006464;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+}
+.spinner .text-field {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 2, 0, 0, 1);
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-shape: "M 0 0 L 8 0 L 4 8 Z"; /* 自定义箭头形状 */
+    -fx-padding: 4;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-translate-x: 1px;
+    -fx-translate-y: 1px;
+}

@@ -1,0 +1,36 @@
+.root {
+    -fx-background-image: url("../image/libraryPic.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+.button {
+	-fx-font-weight: bold;
+    -fx-text-fill: #006464;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+.text-field {
+	-fx-font-family: "微软雅黑";
+    -fx-font-weight: normal;
+    -fx-text-fill: #006464;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+    -fx-background-color: white;
+    -fx-border-color: #006464;
+}
+.text {
+    -fx-font-family: "微软雅黑";
+    -fx-text-fill: #006464;
+    -fx-font-weight: bold;
+}
+.text-field:hover {
+    -fx-border-color: #00B050; /* 浅绿色 */
+}
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
