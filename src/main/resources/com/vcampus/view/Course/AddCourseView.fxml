@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../../css/ClientCss.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.course.AddCourseController">
+    <children>
+        <TextField fx:id="idText" layoutX="235.0" layoutY="70.0" prefHeight="36.0" prefWidth="535.0" />
+        <TextField fx:id="nameText" layoutX="235.0" layoutY="139.0" prefHeight="36.0" prefWidth="535.0" />
+        <TextField fx:id="teacherText" layoutX="235.0" layoutY="206.0" prefHeight="36.0" prefWidth="535.0" />
+        <TextField fx:id="creditText" layoutX="235.0" layoutY="273.0" prefHeight="36.0" prefWidth="535.0" />
+        <TextField fx:id="timeText" layoutX="235.0" layoutY="341.0" prefHeight="36.0" prefWidth="535.0" />
+        <TextField fx:id="locationText" layoutX="235.0" layoutY="404.0" prefHeight="36.0" prefWidth="535.0" />
+        <TextField fx:id="capacityText" layoutX="241.0" layoutY="469.0" prefHeight="36.0" prefWidth="535.0" />
+        <Button fx:id="confirmButton" layoutX="241.0" layoutY="539.0" mnemonicParsing="false" onAction="#confirm" prefHeight="40.0" prefWidth="90.0" text="确认">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+        <Button layoutX="564.0" layoutY="539.0" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="90.0" text="取消">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Button>
+      <Text layoutX="75.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="课程编号" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="课程名称" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="授课教师" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="课程学分" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="课程时间" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="课程地点" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="课程容量" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

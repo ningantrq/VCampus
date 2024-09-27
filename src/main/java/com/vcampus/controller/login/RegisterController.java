@@ -27,8 +27,6 @@ public class RegisterController implements Initializable {
     @FXML
     private Button ExitButton;
 
-    @FXML
-    private Button ImageButton;
 
     @FXML
     private Button RegisterButton;

@@ -5,6 +5,8 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -15,35 +17,47 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="750.0" stylesheets="@../../css/LoginCss.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.login.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="900.0" stylesheets="@../../css/LoginCss.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.login.LoginController">
     <children>
-        <BorderPane layoutY="59.0" prefHeight="299.0" prefWidth="319.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+        <BorderPane layoutX="505.0" layoutY="31.0" prefHeight="335.0" prefWidth="351.0" AnchorPane.bottomAnchor="64.33333333333331" AnchorPane.leftAnchor="505.0" AnchorPane.rightAnchor="44.33333333333326" AnchorPane.topAnchor="31.0">
             <bottom>
                 <HBox prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <children>
                         <Separator prefWidth="200.0" visible="false" />
-                        <Button fx:id="LoginButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Login" text="登录">
+                        <Button fx:id="LoginButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Login" prefHeight="30.0" prefWidth="70.0" styleClass="LoginButton" text="登录">
                             <HBox.margin>
                                 <Insets top="10.0" />
                             </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                         </Button>
                         <Separator prefWidth="10.0" visible="false" />
-                        <Button fx:id="RegisterButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Register" text="注册">
+                        <Button fx:id="RegisterButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Register" prefHeight="30.0" prefWidth="70.0" styleClass="LoginButton" text="注册">
                             <HBox.margin>
                                 <Insets bottom="10.0" top="10.0" />
                             </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                         </Button>
                         <Separator prefWidth="10.0" visible="false" />
-                        <Button fx:id="ExitButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Exit" text="退出">
+                        <Button fx:id="ExitButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Exit" prefHeight="30.0" prefWidth="70.0" styleClass="LoginButton" text="退出">
                             <HBox.margin>
                                 <Insets top="10.0" />
                             </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                         </Button>
                         <Separator prefWidth="10.0" visible="false" />
-                        <Button fx:id="ForgetButton" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#Forget" text="忘记密码">
+                        <Button fx:id="ForgetButton" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#Forget" prefHeight="30.0" prefWidth="88.0" styleClass="LoginButton" text="忘记密码">
                             <HBox.margin>
                                 <Insets top="10.0" />
                             </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                         </Button>
                         <Separator prefWidth="200.0" visible="false" />
                     </children>
@@ -53,7 +67,7 @@
                 </HBox>
             </bottom>
             <center>
-                <VBox minWidth="200.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                <VBox minWidth="200.0" prefHeight="149.0" prefWidth="309.0" BorderPane.alignment="CENTER">
                     <children>
                         <GridPane VBox.vgrow="ALWAYS">
                             <columnConstraints>
@@ -68,11 +82,11 @@
                                 <Insets bottom="20.0" />
                             </VBox.margin>
                             <children>
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="用户名">
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="用户名">
                                     <font>
                                         <Font size="18.0" />
                                     </font></Text>
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="密码" GridPane.rowIndex="1">
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="密码" GridPane.rowIndex="1">
                                     <font>
                                         <Font size="18.0" />
                                     </font></Text>
@@ -84,12 +98,12 @@
                 </VBox>
             </center>
             <top>
-                <HBox prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <HBox prefHeight="109.0" prefWidth="351.0" BorderPane.alignment="CENTER">
                     <children>
                         <Separator prefWidth="200.0" visible="false" HBox.hgrow="ALWAYS" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="登录">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="登录">
                             <font>
-                                <Font size="24.0" />
+                                <Font name="Agency FB Bold" size="40.0" />
                             </font>
                             <HBox.margin>
                                 <Insets bottom="20.0" top="20.0" />
@@ -109,5 +123,10 @@
                 <Separator prefWidth="20.0" visible="false" BorderPane.alignment="CENTER" />
             </left>
         </BorderPane>
+      <ImageView fitHeight="430.0" fitWidth="479.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/logo.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

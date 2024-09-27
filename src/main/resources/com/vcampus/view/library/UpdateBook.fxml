@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" stylesheets="@../../css/ClientCss.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.Library.UpdateBook">
+
+    <GridPane hgap="10" layoutX="50" layoutY="50" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints maxWidth="187.33332061767578" minWidth="62.66665903727214" prefWidth="99.99997965494791" />
+            <ColumnConstraints maxWidth="256.6666742960612" minWidth="131.33334604899085" prefWidth="220.66668701171872" />
+        </columnConstraints>
+
+        <!-- 索书号 -->
+        <Label text="索书号:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="tfBookId" disable="true" prefHeight="27.0" prefWidth="192.0" promptText="请输入索书号" style="-fx-background-color: #E0E0E0; -fx-opacity: 1;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- 书名 -->
+        <Label text="书名:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="tfBookName" prefHeight="27.0" prefWidth="218.0" promptText="请输入书名" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- 作者 -->
+        <Label text="作者:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="tfAuthor" promptText="请输入作者" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <!--位置  -->
+        <Label text="位置:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="tfPlace" promptText="请输入馆藏位置" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <!--类别  -->
+        <Label text="类别:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="tfType" promptText="请输入书籍类别" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <!-- 更新按钮 -->
+        <Button fx:id="update" onMouseClicked="#librarySubmit" prefHeight="29.0" prefWidth="127.0" text="更新" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+        <!-- 返回按钮 -->
+        <Button fx:id="exit" onMouseClicked="#libraryExit" prefHeight="29.0" prefWidth="107.0" text="返回" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+</AnchorPane>

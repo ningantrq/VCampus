@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../../css/ClientCss.css"
+            fx:controller="com.vcampus.controller.bank.Charge"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="扣费" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0"/>
+
+        <Label text="扣费项目：" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="20.0"/>
+        <ComboBox fx:id="comboBox" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="100.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="学费"/>
+                    <String fx:value="水电费"/>
+                    <String fx:value="网费"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label text="金额：" AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="20.0"/>
+        <TextField fx:id="moneyInput" AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="100.0"/>
+
+        <Button fx:id="submit" text="确定" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="100.0" onAction="#handleConfirmAction"/>
+        <Button fx:id="exit" text="退出" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" onAction="#handleExitAction"/>
+    </children>
+</AnchorPane>

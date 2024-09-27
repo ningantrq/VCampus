@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/ClientCss.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.store.stuOrderMenuController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="76.0" prefWidth="900.0">
+            <children>
+                <HBox prefHeight="76.0" prefWidth="55.0" />
+                <Button fx:id="search" mnemonicParsing="false" onMouseClicked="#enterSearch" prefHeight="36.0" prefWidth="96.0" text="搜索" />
+                <HBox prefHeight="76.0" prefWidth="40.0" />
+                <TextField fx:id="searchContext" onKeyPressed="#keySearch" prefHeight="36.0" prefWidth="351.0" />
+                <HBox alignment="CENTER" prefHeight="76.0" prefWidth="263.0">
+                    <children>
+                        <Button fx:id="display" mnemonicParsing="false" onMouseClicked="#displayAllOrder" prefHeight="36.0" prefWidth="106.0" text="显示全部" />
+                    </children></HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                      <HBox alignment="CENTER" prefHeight="76.0" prefWidth="314.0">
+                          <children>
+                              <Button fx:id="goback" mnemonicParsing="false" onMouseClicked="#EnterStoreMenu" prefHeight="35.0" prefWidth="92.0" text="退出" />
+                          </children>
+                  </HBox>
+               </children></HBox>
+            </children>
+        </HBox>
+        <HBox layoutY="83.0" prefHeight="717.0" prefWidth="909.0">
+            <children>
+                <HBox prefHeight="711.0" prefWidth="1282.0">
+                    <children>
+                        <TableView fx:id="tv" prefHeight="717.0" prefWidth="905.0">
+                            <columns>
+                                <TableColumn fx:id="oidColumn" minWidth="0.0" prefWidth="145.33331298828125" text="订单号" />
+                                <TableColumn fx:id="uidColumn" minWidth="0.0" prefWidth="137.33334350585938" text="用户id" />
+                                <TableColumn fx:id="gidColumn" minWidth="0.0" prefWidth="127.33331298828125" text="商品号" />
+                                <TableColumn fx:id="nameColumn" minWidth="0.0" prefWidth="114.6666259765625" text="商品名" />
+                                <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="53.33331298828125" text="单价" />
+                                <TableColumn fx:id="cntColumn" minWidth="0.0" prefWidth="95.99993896484375" text="个数" />
+                                <TableColumn fx:id="totalColumn" minWidth="0.0" prefWidth="122.66668701171875" text="总价格" />
+                                <TableColumn fx:id="isGoodColumn" minWidth="0.0" prefWidth="107.3333740234375" text="是否商店消费" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

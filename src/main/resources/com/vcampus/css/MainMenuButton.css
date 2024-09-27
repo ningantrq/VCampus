@@ -1,0 +1,25 @@
+.MenuButton {
+    -fx-text-fill: black;
+    -fx-background-color: #F1D476;
+    -fx-font-size: 15;
+    -fx-font-family: '微软雅黑';
+    -fx-font-weight:bold
+
+}
+.MenuButton:hover{
+    -fx-background-color: #057748;
+}
+.MenuBackground{
+    -fx-background-color: #F1D476;
+}
+.MenuTopBackground{
+    -fx-background-color: #9CE37B;
+}
+
+.textMain{
+    -fx-text-fill: #423171;
+    -fx-background-color: #F1D476;
+    -fx-font-family: "Times New Roman";
+    -fx-font-style: italic;
+}
+

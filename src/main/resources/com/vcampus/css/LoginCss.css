@@ -1,33 +1,26 @@
 .root {
-    -fx-background-image: url("../image/libraryPic.jpg");
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
-.button {
-	-fx-font-weight: bold;
-    -fx-text-fill: #006464;
-    -fx-border-radius: 20;
-    -fx-background-radius: 20;
-    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
-}
-.text-field {
-	-fx-font-family: "微软雅黑";
-    -fx-font-weight: normal;
-    -fx-text-fill: #006464;
-    -fx-border-radius: 20;
-    -fx-background-radius: 20;
-    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
-    -fx-background-color: white;
-    -fx-border-color: #006464;
-}
-.text {
-    -fx-font-family: "微软雅黑";
-    -fx-text-fill: #006464;
+.LoginButton{
     -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-radius: 20;
+    -fx-background-radis: 20;
+    -fx-font-family: "仓耳今楷02-6763 W04";
 }
-.text-field:hover {
-    -fx-border-color: #00B050; /* 浅绿色 */
+
+
+.LoginText {
+	-fx-font-family: "仓耳今楷02-6763 W04";
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+    -fx-border-color: black;
 }
+
 .label {
     -fx-font-size: 12px;
     -fx-font-weight: bold;

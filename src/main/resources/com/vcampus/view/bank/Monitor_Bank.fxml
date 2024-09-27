@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="701.0" prefWidth="1100.0" stylesheets="@../../css/ClientCss.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.bank.Monitor_Bank">
+    <children>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <!-- 银行监控 Tab -->
+                <Tab text="账户信息">
+                    <AnchorPane>
+                        <children>
+                            <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                </padding>
+
+                                <!-- 查询部分 -->
+                                <HBox spacing="10.0">
+                                    <TextField fx:id="searchField" promptText="输入账号查询" HBox.hgrow="ALWAYS" />
+                                    <Button onAction="#handleSearch" text="查询" />
+                                    <Button onAction="#handleAll" text="显示所有账户" />
+                                </HBox>
+
+                                <!-- 表格部分 -->
+                                <TableView fx:id="accountTable" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="accountColumn" prefWidth="272.66664695739746" text="账号" />
+                                        <TableColumn fx:id="nameColumn" prefWidth="280.6667175292969" text="姓名" />
+                                        <TableColumn fx:id="balanceColumn" prefWidth="266.0" text="余额" />
+                                        <TableColumn fx:id="statusColumn" prefWidth="241.33331298828125" text="状态" />
+                                    </columns>
+                                </TableView>
+
+                                <!-- 操作按钮部分 -->
+                                <HBox alignment="CENTER" spacing="10.0">
+                                    <Button onAction="#handleFreezeUnfreeze" text="冻结/解冻" />
+                                    <Button fx:id="chargeButton" onAction="#handleCharge" text="扣费" />
+                                </HBox>
+                            </VBox>
+                        </children>
+                    </AnchorPane>
+                </Tab>
+
+                <!-- 账单 Tab -->
+                <Tab text="账单信息">
+                    <AnchorPane>
+                        <children>
+                            <VBox spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <HBox spacing="10">
+                                    <TextField fx:id="billSearchField" prefHeight="27.0" prefWidth="245.0" promptText="输入账单编号" />
+                                    <Button onAction="#handleBillSearch" prefHeight="29.0" prefWidth="85.0" text="搜索" />
+                                    <Button onAction="#handleShowAllBills" prefHeight="29.0" prefWidth="167.0" text="显示所有流水" />
+                                </HBox>
+                                <TableView fx:id="billsTable" prefHeight="629.0" prefWidth="1080.0">
+                                    <columns>
+                                        <TableColumn fx:id="billIdColumn" prefWidth="142.6666612625122" text="账单编号" />
+                                        <TableColumn fx:id="billAccountColumn" prefWidth="105.33335876464844" text="账户" />
+                                        <TableColumn fx:id="productIdColumn" prefWidth="192.66668701171875" text="商品编号" />
+                                        <TableColumn fx:id="productNameColumn" prefWidth="152.00003051757812" text="商品名称" />
+                                        <TableColumn fx:id="priceColumn" prefWidth="126.6666259765625" text="单价" />
+                                        <TableColumn fx:id="quantityColumn" prefWidth="115.333251953125" text="数量" />
+                                        <TableColumn fx:id="totalPriceColumn" prefWidth="108.0" text="总价" />
+                                        <TableColumn fx:id="productTypeColumn" prefWidth="141.33331298828125" text="商品类型" />
+                                    </columns>
+                                </TableView>
+                            </VBox>
+                        </children>
+                    </AnchorPane>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

@@ -8,7 +8,6 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -18,35 +17,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.login.RegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vcampus.controller.login.RegisterController">
    <children>
       <VBox layoutX="104.0" layoutY="57.0" prefHeight="200.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="70.0" prefWidth="200.0">
+            <HBox prefHeight="117.0" prefWidth="500.0">
                <children>
                   <Separator prefWidth="300.0" visible="false" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="注册">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="注册">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
                   </Text>
                   <Separator maxWidth="1.7976931348623157E308" prefWidth="300.0" visible="false" />
-               </children>
-            </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Separator prefWidth="200.0" visible="false" />
-                  <Button fx:id="ImageButton" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ChooseImage" text="选择照片">
-                     <HBox.margin>
-                        <Insets top="60.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Separator minWidth="-Infinity" prefWidth="40.0" visible="false" />
-                  <ImageView fx:id="image" fitHeight="150.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true" />
-                  <Separator prefWidth="200.0" visible="false" />
                </children>
             </HBox>
             <HBox minHeight="200.0" prefHeight="100.0" prefWidth="200.0">
@@ -70,30 +56,30 @@
                         <Insets bottom="20.0" />
                      </HBox.margin>
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="姓名" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="性别" GridPane.columnIndex="2" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="年龄" GridPane.rowIndex="2" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="编号" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="密码" GridPane.rowIndex="4" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="身份" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <TextField fx:id="username" GridPane.columnIndex="1">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="姓名" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="性别" GridPane.columnIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="年龄" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="编号" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="密码" GridPane.rowIndex="4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="LoginText" text="身份" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextField fx:id="username" styleClass="ChangeField" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets right="5.0" />
                            </GridPane.margin>
                         </TextField>
-                        <TextField fx:id="id" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <TextField fx:id="id" styleClass="ChangeField" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="5.0" right="5.0" />
                            </GridPane.margin>
                         </TextField>
-                        <TextField fx:id="pwd" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <TextField fx:id="pwd" styleClass="ChangeField" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets right="5.0" />
                            </GridPane.margin>
                         </TextField>
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <children>
-                              <RadioButton fx:id="male" mnemonicParsing="false" selected="true" text="男">
+                              <RadioButton fx:id="male" mnemonicParsing="false" selected="true" styleClass="LoginButton" text="男">
                                  <HBox.margin>
                                     <Insets top="15.0" />
                                  </HBox.margin>
@@ -102,21 +88,21 @@
                                  </toggleGroup>
                               </RadioButton>
                               <Separator maxWidth="30.0" prefWidth="200.0" visible="false" />
-                              <RadioButton fx:id="female" mnemonicParsing="false" text="女" toggleGroup="$gender">
+                              <RadioButton fx:id="female" mnemonicParsing="false" styleClass="LoginButton" text="女" toggleGroup="$gender">
                                  <HBox.margin>
                                     <Insets top="15.0" />
                                  </HBox.margin>
                               </RadioButton>
                            </children>
                         </HBox>
-                        <Spinner fx:id="age" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Spinner fx:id="age" editable="true" styleClass="ChangeField" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets right="5.0" />
                            </GridPane.margin>
                         </Spinner>
                         <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                            <children>
-                              <RadioButton fx:id="student" mnemonicParsing="false" selected="true" text="学生">
+                              <RadioButton fx:id="student" mnemonicParsing="false" selected="true" styleClass="LoginButton" text="学生">
                                  <padding>
                                     <Insets top="15.0" />
                                  </padding>
@@ -125,13 +111,13 @@
                                  </toggleGroup>
                               </RadioButton>
                               <Separator maxWidth="5.0" prefWidth="200.0" visible="false" />
-                              <RadioButton fx:id="teacher" mnemonicParsing="false" text="教师" toggleGroup="$job">
+                              <RadioButton fx:id="teacher" mnemonicParsing="false" styleClass="LoginButton" text="教师" toggleGroup="$job">
                                  <padding>
                                     <Insets top="15.0" />
                                  </padding>
                               </RadioButton>
                               <Separator maxWidth="5.0" prefWidth="5.0" visible="false" />
-                              <RadioButton fx:id="adminstrator" mnemonicParsing="false" text="管理员" toggleGroup="$job">
+                              <RadioButton fx:id="adminstrator" mnemonicParsing="false" styleClass="LoginButton" text="管理员" toggleGroup="$job">
                                  <padding>
                                     <Insets top="15.0" />
                                  </padding>
@@ -149,11 +135,11 @@
             <HBox prefHeight="20.0" prefWidth="440.0">
                <children>
                   <Separator prefWidth="200.0" visible="false" />
-                  <Button fx:id="RegisterButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Register" text="注册" />
+                  <Button fx:id="RegisterButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Register" styleClass="LoginButton" text="注册" />
                   <Separator minWidth="50.0" prefWidth="50.0" visible="false" />
-                  <Button fx:id="ReturnButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Return" text="返回" />
+                  <Button fx:id="ReturnButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Return" styleClass="LoginButton" text="返回" />
                   <Separator minWidth="50.0" prefWidth="10.0" visible="false" />
-                  <Button fx:id="ExitButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Exit" text="退出" />
+                  <Button fx:id="ExitButton" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#Exit" styleClass="LoginButton" text="退出" />
                   <Separator prefWidth="200.0" visible="false" />
                </children>
                <VBox.margin>
@@ -164,7 +150,6 @@
       </VBox>
    </children>
    <stylesheets>
-      <URL value="@../../css/ClientCss.css" />
-      <URL value="@../../css/ShowCss.css" />
+      <URL value="@../../css/ChangePassword.css" />
    </stylesheets>
 </AnchorPane>

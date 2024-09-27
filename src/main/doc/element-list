@@ -1,0 +1,17 @@
+module:com.vcampus
+com.vcampus
+com.vcampus.controller
+com.vcampus.controller.ai
+com.vcampus.controller.bank
+com.vcampus.controller.course
+com.vcampus.controller.Library
+com.vcampus.controller.login
+com.vcampus.controller.menu
+com.vcampus.controller.store
+com.vcampus.controller.studentManagement
+com.vcampus.dao
+com.vcampus.func.client
+com.vcampus.func.server
+com.vcampus.message
+com.vcampus.net
+com.vcampus.pojo

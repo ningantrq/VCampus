@@ -15,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -39,25 +40,35 @@ public class LoginController {
     @FXML
     private TextField username;
 
-    //这个并没有实现！
     @FXML
     /**
      * 进入忘记密码
-     * */
+     */
     void Forget(MouseEvent event) {
-        ((Stage)ForgetButton.getScene().getWindow()).close();
         try {
+            // 获取当前窗口并关闭
+            Stage currentStage = (Stage) ForgetButton.getScene().getWindow();
+            currentStage.close();
+
+            // 加载忘记密码的 FXML 文件
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("Forget.fxml"));
-            AnchorPane page = loader.load();
+            loader.setLocation(getClass().getResource("/com/vcampus/view/login/Forget.fxml")); // 确保路径正确
+            AnchorPane forgetPage = loader.load();
+
+            // 创建新窗口并设置场景
             Stage stage = new Stage();
             stage.setResizable(false);
             stage.setTitle("忘记密码");
-            stage.setScene(new Scene(page));
+            stage.setScene(new Scene(forgetPage));
             stage.show();
-        }catch (Exception e) {
-            // TODO: handle exception
+        } catch (IOException e) {
             e.printStackTrace();
+            // 显示错误提示
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("加载错误");
+            alert.setHeaderText(null);
+            alert.setContentText("无法加载忘记密码界面！");
+            alert.showAndWait();
         }
     }
 
@@ -94,21 +105,34 @@ public class LoginController {
             alert.setContentText("账号密码有误，登录失败");
             alert.showAndWait();
         }else {
-            //进入主界面
-//            ((Stage)LoginButton.getScene().getWindow()).close();
-//            try {
-//                FXMLLoader loader = new FXMLLoader();
-//                loader.setLocation(getClass().getResource("/view/MainMenu/MainMenu.fxml"));
-//                AnchorPane page = loader.load();
-//                Stage stage = new Stage();
-//                stage.setResizable(false);
-//                stage.setTitle("主菜单");
-//                stage.setScene(new Scene(page));
-//                stage.show();
-//            }catch (Exception e) {
-//                // TODO: handle exception
-//                e.printStackTrace();
-//            }
+            // 登录成功，关闭当前登录窗口
+            ((Stage) LoginButton.getScene().getWindow()).close();
+
+            // 加载主菜单界面
+            try {
+                // 创建FXML加载器
+                FXMLLoader loader = new FXMLLoader();
+                // 设置加载的FXML文件路径
+                loader.setLocation(getClass().getResource("/com/vcampus/view/MainMenu/NewMainMenu.fxml"));
+                // 加载FXML文件并创建AnchorPane对象
+                AnchorPane mainMenu = loader.load();
+
+                // 创建新窗口并设置场景
+                Stage stage = new Stage();
+                stage.setTitle("主菜单");
+                stage.setScene(new Scene(mainMenu));
+                stage.setResizable(false);
+//                stage.initStyle(StageStyle.UNDECORATED);
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                // 显示错误提示
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("加载错误");
+                alert.setHeaderText(null);
+                alert.setContentText("无法加载主菜单界面！");
+                alert.showAndWait();
+            }
         }
     }
 
